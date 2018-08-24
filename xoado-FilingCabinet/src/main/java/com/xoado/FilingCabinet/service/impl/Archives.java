@@ -65,7 +65,7 @@ public class Archives implements IArchives{
 	@Transactional
 	public XoadoResult insertArchives(String archive_Name, String owner_Orgid, String owner_Orgname, Object comments,
 			HttpServletRequest request) {
-
+//
 		AccessIdentity token = (AccessIdentity) request.getSession().getServletContext().getAttribute(XoadoConstant.XOADOTOKEN);
 		String archives_Id = MD5.MD5Encode(UUID.randomUUID().toString());
 		TblArchives archives = TblArchives.addArchives(archives_Id, archive_Name, owner_Orgid, owner_Orgname, token.getUserId(), token.getUserName(), comments, new Date(), token.getUserId(), token.getUserName());
