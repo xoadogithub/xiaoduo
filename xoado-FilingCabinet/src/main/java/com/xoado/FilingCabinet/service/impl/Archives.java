@@ -70,7 +70,7 @@ public class Archives implements IArchives{
 		String archives_Id = MD5.MD5Encode(UUID.randomUUID().toString());
 		TblArchives archives = TblArchives.addArchives(archives_Id, archive_Name, owner_Orgid, owner_Orgname, token.getUserId(), token.getUserName(), comments, new Date(), token.getUserId(), token.getUserName());
 		TblCurrentArchives tblCurrentArchives = TblCurrentArchives.addCurrentArchives(token.getUserId(), archives_Id);
-		
+//		
 		archivesMapper.insert(archives);
 		tblCurrentArchivesMapper.insert(tblCurrentArchives);
 
