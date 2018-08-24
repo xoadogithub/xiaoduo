@@ -86,8 +86,6 @@ public class Archives implements IArchives{
 	@Override
 	public XoadoResult getarchives(Integer Page, Integer Rows, HttpServletRequest request) {
 	
-		
-		
 		AccessIdentity token = (AccessIdentity)request.getSession().getServletContext().getAttribute(XoadoConstant.XOADOTOKEN);
 		if(token==null){
 //			微信用户未注册

@@ -93,7 +93,7 @@
       select B.archive_id,B.archive_name,B.owner_org,B.owner_user,B.comments,B.attachment_picture,B.attachment_document,C.holddate,C.holdfrom 
       from tbl_archives as B,
       (select b.`holddate`,b.`holdfrom`,b.`archive_id` from tbl_current_archives as b where ownerid=#{ownerid}) 
-      as C where B.archive_id=C.archive_id  
+      as C where B.archive_id=C.archive_id &amp;&amp; deleted=0 
   </select>
   
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.xoado.FilingCabinet.bean.TblCurrentArchivesKey" >
