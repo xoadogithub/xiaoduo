@@ -72,6 +72,7 @@ public class Archives implements IArchives{
 		TblCurrentArchives tblCurrentArchives = TblCurrentArchives.addCurrentArchives(token.getUserId(), archives_Id);
 //		
 //		
+//		
 		archivesMapper.insert(archives);
 		tblCurrentArchivesMapper.insert(tblCurrentArchives);
 
